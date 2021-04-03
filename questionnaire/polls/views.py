@@ -74,7 +74,14 @@ class CreateChoiceView(CreateView):
 
 
 class UpdateChoiceView(UpdateView):
-    pass
+    form_class = ChoiceForm
+    model = Choice
+    template_name = 'choice/update.html'
+    context_object_name = 'choice'
+
+    def get_success_url(self):
+        choice = Choice.objects.get(id=self.kwargs.get('pk'))
+        return reverse('poll-view', kwargs={'pk':choice.poll.id})
 
 class DeleteChoiceView(DeleteView):
     pass
