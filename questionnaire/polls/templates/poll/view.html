@@ -5,8 +5,7 @@
         <a href="{% url 'poll-update' poll.id %}" class="nav-link text-success">Редактировать </a>
     </li>
     <li class="nav-item">
-        <a href="" class="nav-link text-danger">Удалить</a>
-{#        <a href="{% url 'project-delete' project.id %}" class="card-link text-danger">Удалить</a>#}
+        <a href="{% url 'poll-delete' poll.id%}" class="nav-link text-danger">Удалить</a>
     </li>
 {% endblock nav %}
 {% block content %}
