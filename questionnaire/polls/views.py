@@ -15,7 +15,7 @@ from django.db.models import Q
 from django.utils.http import urlencode
 
 from .models import Poll, Choice
-# from .forms import IssueForm, SearchForm, ProjectForm
+from .forms import PollForm, ChoiceForm
 
 # Create your views here.
 
@@ -31,3 +31,9 @@ class IndexPollView(ListView):
 class ViewPollView(DetailView):
     model = Poll
     template_name = 'poll/view.html'
+
+class CreatePollView(CreateView):
+    template_name = 'poll/create.html'
+    form_class = PollForm
+    model = Poll
+    success_url = reverse_lazy('poll-list')
