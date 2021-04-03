@@ -1,0 +1,9 @@
+    <div class="row">
+    {% if not choices %}
+        <h2>нет ответов</h2>
+    {% endif %}
+        {% for choice in choices %}
+                <p class="card-text">{{ choice.option }}</p>
+{#                <a href="{% url "issue-view" issue.id %}" class="btn btn-primary">Детальный просмотр</a>#}
+        {% endfor %}
+    </div>
