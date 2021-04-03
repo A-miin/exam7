@@ -11,8 +11,8 @@
               <div class="card-body">
                 <h5 class="card-title">{{ poll.id }}</h5>
                 <p class="card-text">{{ poll.question }}</p>
-{#                 <a href="" class="btn btn-primary">Детальный просмотр</a>#}
-                 <a href="{% url "poll-view" poll.id %}" class="btn btn-primary">Детальный просмотр</a>
+                 <a href="{% url "poll-view" poll.id %}" class="btn-outline-primary">Детальный просмотр</a>
+                 <a href="{% url "answer-create" poll.id %}" class="btn-outline-secondary">Ответить</a>
               </div>
             </div>
           </div>

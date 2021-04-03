@@ -7,6 +7,10 @@
     <li class="nav-item">
         <a href="{% url 'poll-delete' poll.id%}" class="nav-link text-danger">Удалить</a>
     </li>
+    <li class="nav-item">
+        <a href="{% url "answer-create" poll.id %}" class="nav-link text-primary">Ответить</a>
+    </li>
+
 {% endblock nav %}
 {% block content %}
     <div class="card text-center mt-5 pb-5">

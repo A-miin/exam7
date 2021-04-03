@@ -14,8 +14,8 @@ from django.urls import reverse, reverse_lazy
 from django.db.models import Q
 from django.utils.http import urlencode
 
-from .models import Poll, Choice
-from .forms import PollForm, ChoiceForm
+from .models import Poll, Choice, Answer
+from .forms import PollForm, ChoiceForm, AnswerForm
 
 # Create your views here.
 
@@ -86,3 +86,30 @@ class DeleteChoiceView(DeleteView):
     def get_success_url(self):
         choice = Choice.objects.get(id=self.kwargs.get('pk'))
         return reverse('poll-view', kwargs={'pk': choice.poll.id})
+
+class CreateAnswerView(CreateView):
+    template_name = 'answer/create.html'
+    form_class = AnswerForm
+    model = Answer
+
+    def get_success_url(self):
+        return reverse('poll-view', kwargs={'pk':self.kwargs.get('pk')})
+
+    def get_form(self, form_class=None):
+        if form_class is None:
+            form_class = self.get_form_class()
+        poll = Poll.objects.get(id=self.kwargs.get('pk'))
+        return form_class(poll, **self.get_form_kwargs())
+
+    def form_valid(self, form):
+        poll = Poll.objects.get(id=self.kwargs.get('pk'))
+        choice = form.cleaned_data.get('choice')
+        answer=Answer(poll=poll, choice=choice)
+        answer.save()
+        return redirect('poll-list')
+
+
+
+
+
+
