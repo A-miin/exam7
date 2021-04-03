@@ -16,6 +16,7 @@
     <div class="card text-center mt-5 pb-5">
       <div class="card-body mb-2 mt-2">
         <h5 class="card-title">{{ poll.question}}</h5>
+          <p>всего ответов: {{ poll.answers.count }}</p>
       </div>
      {% include 'choice/list.html' with choices=poll.choices.all %}
     <form action="{% url "choice-create" poll.id %}" method="post">

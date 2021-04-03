@@ -23,6 +23,11 @@ class Choice(models.Model):
     def __str__(self):
         return f'{self.option}'
 
+    def get_stat(self):
+        if self.poll.answers.count()>0:
+            return '{:.1f}'.format(self.answers.count()/self.poll.answers.count()*100)
+        return 0
+
 class Answer(models.Model):
     poll = models.ForeignKey('polls.Poll', on_delete=models.CASCADE, related_name='answers', verbose_name="Ответ")
     created_at = models.DateTimeField(auto_now_add=True)
