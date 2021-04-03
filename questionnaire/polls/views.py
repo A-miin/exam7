@@ -37,3 +37,12 @@ class CreatePollView(CreateView):
     form_class = PollForm
     model = Poll
     success_url = reverse_lazy('poll-list')
+
+class UpdatePollView(UpdateView):
+    form_class = PollForm
+    model = Poll
+    template_name = 'poll/update.html'
+    context_object_name = 'poll'
+
+    def get_success_url(self):
+        return reverse('poll-view', kwargs={'pk':self.kwargs.get('pk')})
