@@ -14,11 +14,23 @@ class Poll(models.Model):
 
 class Choice(models.Model):
     option = models.TextField(max_length=256, null=False, blank=False)
-    poll = models.ForeignKey('polls.Poll', on_delete=models.CASCADE, related_name="choices", verbose_name="Ответы")
+    poll = models.ForeignKey('polls.Poll', on_delete=models.CASCADE, related_name="choices", verbose_name="Вариант")
 
     class Meta:
-        verbose_name="Ответ"
-        verbose_name_plural="Ответы"
+        verbose_name="Вариант"
+        verbose_name_plural="Варианты"
 
     def __str__(self):
-        return f'{self.poll.question}:{self.option}'
+        return f'{self.option}'
+
+class Answer(models.Model):
+    poll = models.ForeignKey('polls.Poll', on_delete=models.CASCADE, related_name='answers', verbose_name="Ответ")
+    created_at = models.DateTimeField(auto_now_add=True)
+    choice = models.ForeignKey('polls.Choice', on_delete=models.CASCADE, related_name='answers', verbose_name="Ответ")
+
+    class Meta:
+        verbose_name='Ответ'
+        verbose_name_plural='Ответы'
+
+    def __str__(self):
+        return f'{self.poll.question}:{self.choice.option}'

@@ -8,6 +8,6 @@
 
 {% block content %}
     <form action="{% url "choice-update" choice.id %}" method="post">
-        {% include "partial/form.html" with button_text="Редактировать ответы" %}
+        {% include "partial/form.html" with button_text="Редактировать вариант" %}
     </form>
 {% endblock content %}

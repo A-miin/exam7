@@ -15,7 +15,7 @@
       </div>
      {% include 'choice/list.html' with choices=poll.choices.all %}
     <form action="{% url "choice-create" poll.id %}" method="post">
-        {% include "partial/form.html" with button_text="Создать ответ" %}
+        {% include "partial/form.html" with button_text="Создать вариант" %}
     </form>
 
     </div>
