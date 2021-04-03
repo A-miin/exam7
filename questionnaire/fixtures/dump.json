@@ -1,0 +1,276 @@
+[
+{
+  "model": "polls.poll",
+  "pk": 1,
+  "fields": {
+    "question": "Which of the following asymmetric cryptography algorithms is most commonly used?",
+    "created_at": "2021-04-03T06:03:50.396Z"
+  }
+},
+{
+  "model": "polls.poll",
+  "pk": 2,
+  "fields": {
+    "question": "Хотели бы вы быть африканским супер героем?",
+    "created_at": "2021-04-03T06:05:43.129Z"
+  }
+},
+{
+  "model": "polls.poll",
+  "pk": 3,
+  "fields": {
+    "question": "Какую музыку вы слушаете?",
+    "created_at": "2021-04-03T06:06:02.371Z"
+  }
+},
+{
+  "model": "polls.poll",
+  "pk": 4,
+  "fields": {
+    "question": "Еще не смотрели новую серию \"Игры Престолов?\"",
+    "created_at": "2021-04-03T06:06:17.793Z"
+  }
+},
+{
+  "model": "polls.poll",
+  "pk": 5,
+  "fields": {
+    "question": "Что вы ели на завтрак?",
+    "created_at": "2021-04-03T06:06:42.142Z"
+  }
+},
+{
+  "model": "polls.poll",
+  "pk": 6,
+  "fields": {
+    "question": "тест1",
+    "created_at": "2021-04-03T06:09:19.012Z"
+  }
+},
+{
+  "model": "polls.poll",
+  "pk": 7,
+  "fields": {
+    "question": "тест2",
+    "created_at": "2021-04-03T06:09:30.007Z"
+  }
+},
+{
+  "model": "polls.poll",
+  "pk": 8,
+  "fields": {
+    "question": "тест3",
+    "created_at": "2021-04-03T06:09:36.821Z"
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 1,
+  "fields": {
+    "option": "AES",
+    "poll": 1
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 2,
+  "fields": {
+    "option": "Blowfish",
+    "poll": 1
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 3,
+  "fields": {
+    "option": "RSA",
+    "poll": 1
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 4,
+  "fields": {
+    "option": "Twofish",
+    "poll": 1
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 5,
+  "fields": {
+    "option": "Я бомж, для меня еда бывает только когда голубь со сломанным крылом взлететь не может.",
+    "poll": 5
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 6,
+  "fields": {
+    "option": "Я работаю кондитером, сегодня ел сахар",
+    "poll": 5
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 7,
+  "fields": {
+    "option": "Ебашил протеин, за 10 рублей кило, купленный у Китайцев, на черным рынке, со скидкой в 10 процентов, в кредит без рассрочки",
+    "poll": 5
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 8,
+  "fields": {
+    "option": "Ем через трубочку, сахарозу, белки и углеводы, как амеба блять",
+    "poll": 5
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 9,
+  "fields": {
+    "option": "Смотрел. Свежая порция сисек и порнушки.",
+    "poll": 4
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 10,
+  "fields": {
+    "option": "Не видел, но уже",
+    "poll": 4
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 11,
+  "fields": {
+    "option": "У меня рак уха",
+    "poll": 3
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 12,
+  "fields": {
+    "option": "Временами слушаю классику, перед делом. Потом беру топоры и кромсаю людей за их музыкальные вкусы.",
+    "poll": 3
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 13,
+  "fields": {
+    "option": "Слушаю черную музыку и ассоциирую ее со своей жизнью.",
+    "poll": 3
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 14,
+  "fields": {
+    "option": "Я бы стал пикачу и ебашил током нигеров, который не саблюдают закон мазафака!",
+    "poll": 2
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 15,
+  "fields": {
+    "option": "Я бы был Таракан-Паук Мэном!",
+    "poll": 2
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 16,
+  "fields": {
+    "option": "Я бы был Мышка-Леталка Мэном!",
+    "poll": 2
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 17,
+  "fields": {
+    "option": "Я бы был Металлалом Мэном!",
+    "poll": 2
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 18,
+  "fields": {
+    "option": "ответ11",
+    "poll": 6
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 19,
+  "fields": {
+    "option": "ответ12",
+    "poll": 6
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 20,
+  "fields": {
+    "option": "ответ21",
+    "poll": 7
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 21,
+  "fields": {
+    "option": "ответ22",
+    "poll": 7
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 22,
+  "fields": {
+    "option": "ответ31",
+    "poll": 8
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 23,
+  "fields": {
+    "option": "ответ32",
+    "poll": 8
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 24,
+  "fields": {
+    "option": "ответ33",
+    "poll": 8
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$216000$JiGDq0rkpEhO$rs/cV/BNigUvIVEm9McMrrEycuyosuyinSc1qEeHYGQ=",
+    "last_login": "2021-04-03T06:02:50.579Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2021-04-03T06:02:20.780Z",
+    "groups": [],
+    "user_permissions": []
+  }
+}
+]
