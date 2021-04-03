@@ -52,3 +52,12 @@ class DeletePollView(DeleteView):
     template_name = 'poll/delete.html'
     context_object_name = 'poll'
     success_url = reverse_lazy('poll-list')
+
+class CreateChoiceView(CreateView):
+    pass
+
+class UpdateChoiceView(UpdateView):
+    pass
+
+class DeleteChoiceView(DeleteView):
+    pass
