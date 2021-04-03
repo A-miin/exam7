@@ -55,12 +55,7 @@ class DeletePollView(DeleteView):
     context_object_name = 'poll'
     success_url = reverse_lazy('poll-list')
 
-# class CreateChoiceView(View):
-#     def post(self, requet, *args, **kwargs):
-#         pass
-
 class CreateChoiceView(CreateView):
-    template_name = 'choice/create.html'
     form_class = ChoiceForm
     model = Choice
 
@@ -84,4 +79,10 @@ class UpdateChoiceView(UpdateView):
         return reverse('poll-view', kwargs={'pk':choice.poll.id})
 
 class DeleteChoiceView(DeleteView):
-    pass
+    model = Choice
+    template_name = 'choice/delete.html'
+    context_object_name = 'choice'
+
+    def get_success_url(self):
+        choice = Choice.objects.get(id=self.kwargs.get('pk'))
+        return reverse('poll-view', kwargs={'pk': choice.poll.id})
