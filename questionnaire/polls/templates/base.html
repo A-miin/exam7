@@ -1,10 +1,28 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>{% block title %}Трекер задач{% endblock title %}</title>
+    <link rel="stylesheet" href="{% static "css/bootstrap.min.css" %}">
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
 </head>
 <body>
+    <div class="container">
+         <nav>
+            <ul class="nav justify-content-center">
+              <li class="nav-item">
+                <a class="nav-link active" href="{% url "poll-list" %}">Project list</a>
+              </li>
+                {% block nav %}
+                {% endblock nav %}
+            </ul>
+        </nav>
+    </div>
+    <div class="container">
+        {% block content %}
+        {% endblock content %}
+    </div>
 
 </body>
 </html>
